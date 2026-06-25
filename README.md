@@ -488,14 +488,14 @@ Running `GET /default` seeds the following data:
 
 | ID | Name | Role | Email | Password |
 |---|---|---|---|---|
-| 1 | Dipesh Soni | Employee | dipesh@gmail.com | dipesh123 |
-| 2 | Mohit Solanki | Manager | mohit@gmail.com | mohit123 |
-| 3 | Sanya Singh Deora | Manager | sanya@gmail.com | sanya |
-| 4 | Priyanjali Bhati | Employee | priyanjali@gmail.com | priyanjali123 |
-| 5 | Harshita Sharma | Admin | Harshita@gmail.com | harshita123 |
+| 1 | YZA | Employee | YZA@gmail.com | YZA123 |
+| 2 | XYZ | Manager | XYZ@gmail.com | XYZ123 |
+| 3 | ABC | Manager | ABC@gmail.com | ABC123 |
+| 4 | BCD | Employee | BCD@gmail.com | BCD123 |
+| 5 | CDE | Admin | CDE@gmail.com | CDE123 |
 | 6 | Sunil Choudhary | Admin | sunil@gmail.com | sunil123 |
-| 7 | Piyush Chauhan | Employee | piyush@gmail.com | piyush123 |
-| 8 | Mohit Malviya | Employee | mohitmalviya@gmail.com | mohit123 |
+| 7 | DEF | Employee | DEF@gmail.com | DEF123 |
+| 8 | EFG | Employee | EFG@gmail.com | EFG123 |
 
 ### Default Risks (Sample)
 
