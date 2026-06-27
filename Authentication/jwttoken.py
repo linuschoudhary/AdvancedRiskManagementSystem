@@ -35,3 +35,7 @@ def verifyToken(token:str,credentials_exception):
         return token_data
     except JWTError:
         raise credentials_exception
+
+def get_user_from_token(token: str) -> str:
+    payload = jwt.decode(token, SECRET_KEY, algorithms=[ALGORITHM])
+    return payload["sub"]

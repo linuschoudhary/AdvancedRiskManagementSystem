@@ -1,15 +1,19 @@
 from Chatbot.tool_binding import build_agent
 # import asyncio
 from datetime import datetime
+from Authentication.jwttoken import get_user_from_token
 
 async def main(content:str,user_token:str):
     agent = await build_agent(user_token=user_token)
 
+    thread_id = get_user_from_token(user_token)
+
     config = {
         "configurable": {
-            "thread_id": "user_1"
+            "thread_id": thread_id
         }
     }
+    
     response = await agent.ainvoke(
         {
             "messages": [
@@ -36,6 +40,7 @@ async def main(content:str,user_token:str):
                     9. While Working with the risks or users make sure to use the current date and time for risk related tasks. current time is {datetime.now()}
                     10. If you don't have proper data about users, say you don't have information regarding that. but don't made up the anwer. for eg. user sunil is logged in and he asked you who is current user?
                     if you don't have any proper proof of current working user in session, don't reply based on log files, as log files can change multiple times by multiple users.
+                    11. If greeting and words like hello, hii, hey in prompt from user then greet with the user's name using it's email: {thread_id}. Note: Don't change the name's speelings by yourself, show name as it is used in email just add spaces between name and surname and mid name if availble.
                     """
                 },
                 {
