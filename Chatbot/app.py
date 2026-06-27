@@ -5,7 +5,7 @@ CHATBOT_API_URL = "http://127.0.0.1:8000/chatbot/"
 LOGIN_FASTAPI_URL = "http://127.0.0.1:8000/login"
 
 
-st.title("ChatBot")
+st.title("RiskBot")
 
 
 with st.sidebar:

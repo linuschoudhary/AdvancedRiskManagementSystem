@@ -10,4 +10,7 @@ logging.basicConfig(
     datefmt="%d-%m-%Y %H:%M:%S"
 )
 
+logging.getLogger("watchfiles").setLevel(logging.CRITICAL)
+logging.getLogger("watchfiles.main").setLevel(logging.CRITICAL)
+
 logger=logging.getLogger(__name__)

@@ -2,6 +2,9 @@ from langchain.agents import create_agent
 from langchain_ollama import ChatOllama
 from langchain_mcp_adapters.client import MultiServerMCPClient
 import os
+from langgraph.checkpoint.memory import InMemorySaver
+
+memory = InMemorySaver()
 
 async def build_agent(user_token:str):
     agent_env=os.environ.copy()
@@ -26,7 +29,8 @@ async def build_agent(user_token:str):
             num_ctx=32768, #or 64000 for higher context size.
             temperature=0
         ),
-        tools=tools
+        tools=tools,
+        checkpointer=memory
     )
 
     return agent

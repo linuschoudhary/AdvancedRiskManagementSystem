@@ -5,13 +5,18 @@ from datetime import datetime
 async def main(content:str,user_token:str):
     agent = await build_agent(user_token=user_token)
 
+    config = {
+        "configurable": {
+            "thread_id": "user_1"
+        }
+    }
     response = await agent.ainvoke(
         {
             "messages": [
                 {
                     "role": "system",
                     "content": f"""
-                    You are a Risk Management Assistant.
+                    You are a Risk Management Assistant named RiskBot.
 
                     Your purpose is to help users manage risks in the Risk Management System.
 
@@ -29,6 +34,8 @@ async def main(content:str,user_token:str):
                     8. When fetching data via tools, 
                     you MUST read the data and apply any user-requested filters yourself before using any other tools.
                     9. While Working with the risks or users make sure to use the current date and time for risk related tasks. current time is {datetime.now()}
+                    10. If you don't have proper data about users, say you don't have information regarding that. but don't made up the anwer. for eg. user sunil is logged in and he asked you who is current user?
+                    if you don't have any proper proof of current working user in session, don't reply based on log files, as log files can change multiple times by multiple users.
                     """
                 },
                 {
@@ -36,7 +43,8 @@ async def main(content:str,user_token:str):
                     "content": content
                 }
             ]
-        }
+        },
+        config = config,
     )
     return (response["messages"][-1].content)
 
