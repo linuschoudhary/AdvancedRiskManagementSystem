@@ -593,14 +593,14 @@ Call `GET /default` once on a fresh database to populate sample records.
 
 | ID | Name | Role | Email | Password |
 |---|---|---|---|---|
-| 1 | Dipesh Soni | Employee | dipesh@gmail.com | dipesh123 |
-| 2 | Mohit Solanki | Manager | mohit@gmail.com | mohit123 |
-| 3 | Sanya Singh Deora | Manager | sanya@gmail.com | sanya |
-| 4 | Priyanjali Bhati | Employee | priyanjali@gmail.com | priyanjali123 |
-| 5 | Harshita Sharma | Admin | Harshita@gmail.com | harshita123 |
+| 1 | Abc Bcd | Employee | abc@gmail.com | abc123 |
+| 2 | Bcd Cde | Manager | bcd@gmail.com | bcd123 |
+| 3 | Cde Def | Manager | cde@gmail.com | cde123 |
+| 4 | Def Efg | Employee | def@gmail.com | def123 |
+| 5 | Efg Fgh | Admin | efg@gmail.com | efg123 |
 | 6 | Sunil Choudhary | Admin | sunil@gmail.com | sunil123 |
-| 7 | Piyush Chauhan | Employee | piyush@gmail.com | piyush123 |
-| 8 | Mohit Malviya | Employee | mohitmalviya@gmail.com | mohit123 |
+| 7 | Fgh Ghi | Employee | fgh@gmail.com | fgh123 |
+| 8 | Ghi Hij | Employee | ghi@gmail.com | ghi123 |
 
 ### Default Risks
 
